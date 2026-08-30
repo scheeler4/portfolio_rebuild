@@ -8,6 +8,8 @@
 export interface ProjectImage {
   url: string
   alt?: string
+  width: number
+  height: number
 }
 
 export interface Project {
@@ -35,7 +37,12 @@ export const projects: Project[] = [
     subtitle: "Cornell Architectural Thesis — Massing Tool",
     description:
       "A tool that enables algorithmic-aided design for architectural massing, letting users author rules that apply dynamically to selected volumes.",
-    thumbnail: { url: "/projects/archiarbiter/1.jpeg", alt: "ArchiArbiter massing tool interface" },
+    thumbnail: {
+      url: "/projects/archiarbiter/1.jpeg",
+      alt: "ArchiArbiter massing tool interface",
+      width: 2475,
+      height: 956,
+    },
     skills: ["Architecture", "Prototyping"],
     role: "Co-creator",
     organization: "Cornell University — Architectural Thesis",
@@ -44,12 +51,11 @@ export const projects: Project[] = [
       "ArchiArbiter is a tool that enables algorithmic-aided design for architectural massing. The software allows users to create rules that can then be applied dynamically to selected volumes.",
       "This work was a collaboration between Jeff Drexel and myself as part of my architectural thesis at Cornell University, exploring how rule-based systems can accelerate and inform early-stage massing decisions.",
     ],
-    images: [
-      { url: "/projects/archiarbiter/1.jpeg" },
-      { url: "/projects/archiarbiter/2.jpeg" },
-      { url: "/projects/archiarbiter/3.jpeg" },
-      { url: "/projects/archiarbiter/4.jpeg" },
-    ],
+    images: Array.from({ length: 16 }, (_, i) => ({
+      url: `/projects/archiarbiter/${i + 1}.jpeg`,
+      width: 2475,
+      height: 956,
+    })),
     featured: true,
     order: 1,
   },
@@ -59,7 +65,12 @@ export const projects: Project[] = [
     subtitle: "KPF Urban Interface — Design Viewer",
     description:
       "A full-cycle design review product that lets teams explore thousands of potential building configurations in a simple, accessible interface.",
-    thumbnail: { url: "/projects/scout/1.jpeg", alt: "Scout design viewer interface" },
+    thumbnail: {
+      url: "/projects/scout/1.jpeg",
+      alt: "Scout design viewer interface",
+      width: 1905,
+      height: 1078,
+    },
     skills: ["Architecture", "Prototyping"],
     role: "Product Designer & Developer",
     organization: "Kohn Pedersen Fox — Urban Interface Team",
@@ -69,7 +80,10 @@ export const projects: Project[] = [
       "Scout started as my internship project while working on the UI team at KPF. Since its inception, Scout has grown into a fully featured product, supporting full cycle design review for numerous active projects.",
       "Scout enables users to explore design spaces with thousands of potential configurations in a simple and easy-to-access manner, bridging computational design output with client-facing communication.",
     ],
-    images: [{ url: "/projects/scout/1.jpeg" }, { url: "/projects/scout/2.jpeg" }],
+    images: [
+      { url: "/projects/scout/1.jpeg", width: 1905, height: 1078 },
+      { url: "/projects/scout/2.jpeg", width: 1902, height: 1076 },
+    ],
     featured: true,
     order: 2,
   },
@@ -79,7 +93,12 @@ export const projects: Project[] = [
     subtitle: "Ubiquiti Labs — UX Review",
     description:
       "A complete review of the Alien router's interfaces, software tools, and setup experience to identify opportunities for improvement.",
-    thumbnail: { url: "/projects/ubiquiti/1.jpeg", alt: "AmpliFi Alien router UX analysis" },
+    thumbnail: {
+      url: "/projects/ubiquiti/1.jpeg",
+      alt: "AmpliFi Alien router UX analysis",
+      width: 1912,
+      height: 1237,
+    },
     skills: ["UI/UX Design"],
     role: "UX Researcher & Designer",
     organization: "Ubiquiti Labs",
@@ -88,58 +107,69 @@ export const projects: Project[] = [
       "The Alien router offers many user-centered features not common on most WiFi products. I conducted a complete review of the current interfaces, software tools, and setup experience to identify potential opportunities for improvement.",
       "The output included concrete experience improvements alongside a set of proposed new features grounded in observed user pain points.",
     ],
-    images: [
-      { url: "/projects/ubiquiti/1.jpeg" },
-      { url: "/projects/ubiquiti/2.jpeg" },
-      { url: "/projects/ubiquiti/3.jpeg" },
-      { url: "/projects/ubiquiti/4.jpeg" },
-    ],
+    images: Array.from({ length: 9 }, (_, i) => ({
+      url: `/projects/ubiquiti/${i + 1}.jpeg`,
+      width: 1912,
+      height: 1237,
+    })),
     featured: true,
     order: 3,
   },
   {
-    slug: "utap",
-    title: "Strategic Opportunity Assessment",
-    subtitle: "United Technology Advanced Projects (UTAP)",
+    slug: "airbnb-redesign",
+    title: "Airbnb Redesign",
+    subtitle: "Concept Case Study — Experience-First Discovery",
     description:
-      "A strategic assessment exploring opportunities and synergies within the smart infrastructure space to develop new products and long-term development pathways.",
-    thumbnail: { url: "/projects/utap/1.jpeg", alt: "UTAP strategic opportunity assessment" },
-    skills: ["Prototyping"],
-    role: "Strategy Consultant",
-    organization: "United Technology Advanced Projects",
+      "A speculative redesign exploring how Airbnb's search and landing experience could shift from location-first browsing to experience-first discovery.",
+    thumbnail: {
+      url: "/projects/airbnb-redesign/1.png",
+      alt: "Airbnb redesign concept — experience-first discovery",
+      width: 816,
+      height: 900,
+    },
+    skills: ["UI/UX Design"],
+    role: "Product Designer",
+    organization: "Independent Concept Case Study",
+    tools: ["Adobe Suite (XD, InDesign, Illustrator, Photoshop)"],
     content: [
-      "The UTAP team was interested in exploring potential opportunities and synergies with their existing business interests in the smart infrastructure space to develop new products and long-term development opportunities.",
-      "The work involved consulting numerous industry and academic experts while developing the proposal, culminating in a set of market-backed recommendations.",
+      "People travel out of a desire to explore, to experience, to find something new or different. Airbnb was founded on these principles, as a means to offer people an experience in places hotels couldn't take them — so why is that desire so far removed from the booking process itself?",
+      "This concept case study reframes Airbnb's core discovery flow around the question 'What do you want to experience?' rather than 'Where do you want to go?' — surfacing events, seasons, and interests as the entry point into search, instead of destinations.",
+      "The redesign carries this idea through a new landing page, an experience-driven home screen, and a search screen that lets users filter directly by interest category, keeping results on a single page while still offering a path to explore further.",
     ],
-    images: [
-      { url: "/projects/utap/1.jpeg" },
-      { url: "/projects/utap/2.jpeg" },
-      { url: "/projects/utap/3.jpeg" },
-      { url: "/projects/utap/4.jpeg" },
-    ],
+    images: Array.from({ length: 5 }, (_, i) => ({
+      url: `/projects/airbnb-redesign/${i + 1}.png`,
+      width: 816,
+      height: 900,
+    })),
+    featured: true,
     order: 4,
   },
   {
-    slug: "invisible-interfaces",
-    title: "Invisible Interfaces",
-    subtitle: "Documenting Cybernetics in Architectural Space",
+    slug: "design-analysis",
+    title: "Computational Design Tools",
+    subtitle: "Optimizing Views + Area Calculator",
     description:
-      "A multifaceted research and design project documenting the evolution of cybernetics and how invisible interfaces shape our interactions with built environments.",
-    thumbnail: { url: "/projects/invisible-interfaces/2.jpg", alt: "Invisible Interfaces smart office concept" },
-    skills: ["UI/UX Design", "Architecture"],
-    role: "Researcher & Designer",
-    organization: "Cornell University — ART 3092",
+      "A collection of computational tools built to make architectural view and area analysis easier to visualize, interact with, and act on.",
+    thumbnail: {
+      url: "/projects/design-analysis/1.jpeg",
+      alt: "Computational design analysis tools interface",
+      width: 1912,
+      height: 1237,
+    },
+    skills: ["Architecture", "Prototyping"],
+    role: "Designer & Developer",
+    organization: "Independent / Academic Research",
+    tools: ["Rhino 6 + Grasshopper"],
     content: [
-      "In documenting the invisible interfaces that we interact with in architectural environments, I believe a multifaceted output helps deliver the narrative of the evolution of cybernetics and our interactions within these built spaces.",
-      "The project began with research tying cybernetics to architectural spaces, using wiring-diagram documentation styles as precedent for visual networks. Inspired in part by Wall++ research from CMU, the work simulated traffic through a space to identify connectivity opportunities.",
-      "This process was repeated five times to produce a series of future interfaces between oneself and the architectural environment: the invisible interface.",
+      "This collection of tools was created to facilitate better design practices within the architectural modeling process. By making data easy to visualize and interact with, the tools remove the technical complexity that often comes with conducting analysis of 3D massings and designs.",
+      "The view-optimization workflow measures target views to and from a site — from sidewalks in, and from key buildings out to the surrounding water and skyline — then scores massing options against a template scheme to quantify view improvement.",
+      "The companion Area Calculator, built as a plugin for Rhino 5 and 6, lets users compare current area allocations against design requirements in real time, cutting a calculation that once took an employee minutes or hours down to seconds.",
     ],
-    images: [
-      { url: "/projects/invisible-interfaces/1.png" },
-      { url: "/projects/invisible-interfaces/2.jpg" },
-      { url: "/projects/invisible-interfaces/3.jpg" },
-      { url: "/projects/invisible-interfaces/4.jpg" },
-    ],
+    images: Array.from({ length: 5 }, (_, i) => ({
+      url: `/projects/design-analysis/${i + 1}.jpeg`,
+      width: 1912,
+      height: 1237,
+    })),
     order: 5,
   },
   {
@@ -148,7 +178,12 @@ export const projects: Project[] = [
     subtitle: "Autodesk Office of the CTO (OCTO)",
     description:
       "Exploring interfaces for interacting within virtual reality environments, bringing Autodesk product suite functionality into VR.",
-    thumbnail: { url: "/projects/vr-interfaces/1.jpeg", alt: "Autodesk VR interface prototype" },
+    thumbnail: {
+      url: "/projects/vr-interfaces/1.jpeg",
+      alt: "Autodesk VR interface prototype",
+      width: 1800,
+      height: 675,
+    },
     skills: ["Virtual Reality"],
     role: "VR Design Intern",
     organization: "Autodesk — Office of the CTO",
@@ -157,12 +192,11 @@ export const projects: Project[] = [
       "While working in the Stingray game engine, our team explored numerous interfaces for interacting with virtual reality environments.",
       "These experiments aimed to bring functionalities found across the Autodesk product suite and traditional 3D tools into the VR space, testing a range of interface elements for spatial interaction.",
     ],
-    images: [
-      { url: "/projects/vr-interfaces/1.jpeg" },
-      { url: "/projects/vr-interfaces/2.jpeg" },
-      { url: "/projects/vr-interfaces/3.jpeg" },
-      { url: "/projects/vr-interfaces/4.jpeg" },
-    ],
+    images: Array.from({ length: 13 }, (_, i) => ({
+      url: `/projects/vr-interfaces/${i + 1}.jpeg`,
+      width: 1800,
+      height: 675,
+    })),
     order: 6,
   },
 ]
@@ -210,6 +244,11 @@ export const workExperience: WorkExperience[] = [
     description:
       "Worked on a team of four interns specializing in VR interfaces within the Office of the CTO.",
   },
+  {
+    organization: "Cornell University",
+    description:
+      "Worked for the Cornell Program of Computer Graphics as a researcher and teaching assistant under Don Greenberg's leadership.",
+  },
 ]
 
 export const coreTenets = [
@@ -226,7 +265,7 @@ export const coreTenets = [
   {
     title: "User Experience",
     description:
-      "People are the most important aspect of a product or design. The key to success is their satisfaction. I strive to create solutions that solve problems and change lives.",
+      "People: the most important aspect of a product or design. The key to success is their satisfaction. I strive to create solutions that solve problems and change lives.",
   },
   {
     title: "Environmental Design",

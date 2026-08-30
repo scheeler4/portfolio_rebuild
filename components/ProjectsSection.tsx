@@ -94,12 +94,12 @@ function ProjectCard({ project }: { project: Project }) {
       href={`/project/${project.slug}`}
       className="group block bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-secondary">
+      <div className="relative aspect-[16/10] overflow-hidden bg-secondary flex items-center justify-center">
         <Image
           src={thumbnailUrl}
           alt={project.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

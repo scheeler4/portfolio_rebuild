@@ -39,6 +39,9 @@ export default function AboutPage() {
             shaped by an interdisciplinary path through strategy consulting, engineering, and
             design.
           </p>
+          <p className="text-sm text-muted-foreground mt-4 animate-fade-in-up animation-delay-400">
+            Based in California, USA
+          </p>
         </div>
       </section>
 

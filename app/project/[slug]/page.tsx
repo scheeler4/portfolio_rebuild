@@ -45,28 +45,30 @@ function ProjectDetail({ project }: { project: Project }) {
     <div className="min-h-screen bg-background">
       <ProjectNav />
 
-      {/* Header image */}
-      <div className="relative h-[50vh] min-h-[360px] w-full mt-16">
-        <Image
-          src={headerUrl || "/placeholder.svg"}
-          alt={project.thumbnail.alt || project.title}
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-8">
-          <div className="max-w-5xl mx-auto">
-            <span className="text-[10px] font-medium tracking-widest uppercase text-primary mb-3 block">
-              Case Study
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 text-balance">
-              {project.title}
-            </h1>
-            {project.subtitle && (
-              <p className="text-lg text-muted-foreground max-w-2xl">{project.subtitle}</p>
-            )}
+      {/* Header */}
+      <div className="pt-32 pb-10 px-6 lg:px-8 border-b border-border">
+        <div className="max-w-5xl mx-auto">
+          <span className="text-[10px] font-medium tracking-widest uppercase text-primary mb-3 block">
+            Case Study
+          </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 text-balance">
+            {project.title}
+          </h1>
+          {project.subtitle && (
+            <p className="text-lg text-muted-foreground max-w-2xl mb-10">{project.subtitle}</p>
+          )}
+
+          {/* Header image — full content visible, never cropped */}
+          <div className="relative w-full overflow-hidden rounded-xl border border-border bg-secondary flex items-center justify-center max-h-[70vh]">
+            <Image
+              src={headerUrl || "/placeholder.svg"}
+              alt={project.thumbnail.alt || project.title}
+              width={project.thumbnail.width}
+              height={project.thumbnail.height}
+              className="w-full h-auto max-h-[70vh] object-contain"
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
           </div>
         </div>
       </div>
@@ -176,12 +178,13 @@ function ProjectDetail({ project }: { project: Project }) {
           <div className="space-y-10">
             {project.images.map((image, index) => (
               <div key={index}>
-                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-border">
+                <div className="relative w-full overflow-hidden rounded-xl border border-border bg-secondary flex items-center justify-center">
                   <Image
                     src={image.url || "/placeholder.svg"}
                     alt={image.alt || `${project.title} image ${index + 1}`}
-                    fill
-                    className="object-cover"
+                    width={image.width}
+                    height={image.height}
+                    className="w-full h-auto object-contain"
                     sizes="(max-width: 1024px) 100vw, 1024px"
                   />
                 </div>
