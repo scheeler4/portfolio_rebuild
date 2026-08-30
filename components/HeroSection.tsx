@@ -31,10 +31,11 @@ export default function HeroSection() {
           Portfolio
         </p>
         <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-3 sm:mb-6 animate-fade-in-up animation-delay-200 text-foreground leading-tight text-balance">
-          Bridging Architecture, Computation & Earth Data
+          Bridging Architecture, Computation & User Experience
         </h1>
         <p className="text-xs sm:text-base md:text-lg lg:text-xl animate-fade-in-up animation-delay-400 text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
-          Product Designer specializing in earth data platforms, interactive visualization, and computational design.
+          A culmination of my work in architecture, technology, and pretty much everything
+          in-between — from computational design tools to VR interfaces.
         </p>
       </div>
 

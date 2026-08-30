@@ -5,10 +5,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { type AnyProject, isFullProject } from "@/lib/hygraph"
+import type { Project } from "@/lib/projects"
 
 interface ProjectsSectionProps {
-  projects: AnyProject[]
+  projects: Project[]
 }
 
 export default function ProjectsSection({ projects }: ProjectsSectionProps) {
@@ -35,7 +35,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
             Selected Work
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
-            Projects that shape how we understand data
+            A culmination of work in architecture, tech, and everything in-between
           </h2>
         </div>
 
@@ -86,9 +86,8 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 /* ------------------------------------------------------------------ */
 /*  Unified Project Card                                               */
 /* ------------------------------------------------------------------ */
-function ProjectCard({ project }: { project: AnyProject }) {
+function ProjectCard({ project }: { project: Project }) {
   const thumbnailUrl = project.thumbnail?.url || "/placeholder.svg?height=400&width=600"
-  const isFull = isFullProject(project)
 
   return (
     <Link
@@ -107,13 +106,11 @@ function ProjectCard({ project }: { project: AnyProject }) {
         <div className="absolute top-4 right-4 h-9 w-9 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
           <ArrowUpRight className="h-4 w-4 text-foreground" />
         </div>
-        {isFull && (
-          <div className="absolute top-4 left-4">
-            <span className="text-[10px] font-medium tracking-widest uppercase text-white/60 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
-              Case Study
-            </span>
-          </div>
-        )}
+        <div className="absolute top-4 left-4">
+          <span className="text-[10px] font-medium tracking-widest uppercase text-white/60 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
+            Case Study
+          </span>
+        </div>
       </div>
 
       <div className="p-5">
