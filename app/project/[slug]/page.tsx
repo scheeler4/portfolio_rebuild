@@ -3,14 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { getAllProjects, getProjectBySlug, type Project } from "@/lib/projects"
+import { getProjectBySlug, type Project } from "@/lib/projects"
 
 interface PageProps {
   params: Promise<{ slug: string }>
-}
-
-export function generateStaticParams() {
-  return getAllProjects().map((p) => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
