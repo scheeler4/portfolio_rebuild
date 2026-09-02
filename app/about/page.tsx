@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft, Mail } from "lucide-react"
-import { coreTenets, workExperience, contactEmail } from "@/lib/projects"
+import { ArrowLeft, Mail, Download } from "lucide-react"
+import { coreTenets, workExperience, contactEmail, resumeUrl } from "@/lib/projects"
 
 export const metadata: Metadata = {
   title: "About | John Scheeler",
@@ -39,9 +39,18 @@ export default function AboutPage() {
             shaped by an interdisciplinary path through strategy consulting, engineering, and
             design.
           </p>
-          <p className="text-sm text-muted-foreground mt-4 animate-fade-in-up animation-delay-400">
-            Based in California, USA
-          </p>
+          <div className="flex flex-wrap items-center gap-4 mt-8 animate-fade-in-up animation-delay-400">
+            <Link
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity duration-200"
+            >
+              <Download className="h-4 w-4" />
+              Download Resume
+            </Link>
+            <p className="text-sm text-muted-foreground">Based in California, USA</p>
+          </div>
         </div>
       </section>
 

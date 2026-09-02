@@ -222,32 +222,32 @@ export const workExperience: WorkExperience[] = [
   {
     organization: "Keystone Strategy",
     description:
-      "Worked on numerous high-impact strategy and digital transformation projects for clients such as Facebook, Microsoft, Oracle, and Dow Jones.",
+      "At Keystone Strategy, I've worked on numerous high-impact strategy and digital transformation projects for clients such as Facebook, Microsoft, Oracle, and Dow Jones.",
   },
   {
     organization: "Kohn Pedersen Fox — Urban Interface",
     description:
-      "Worked on the Urban Interface team, contracted for the urban design and interface simulations of the Waterfront Toronto project by Sidewalk Labs.",
+      "At Kohn Pedersen Fox, I worked on the Urban Interface team. Our team was contracted for the urban design and interface simulations of the Waterfront Toronto project by Sidewalk Labs.",
   },
   {
     organization: "Tesla",
     description:
-      "Worked on the Special Projects team based in Fremont, CA on numerous sprint-based projects to solve pressing operations issues.",
+      "At Tesla, I worked on the Special Projects team based in Fremont, CA on numerous sprint-based projects to solve pressing operations issues.",
   },
   {
     organization: "Google",
     description:
-      "Worked on a five-person team within the ATAP (Advanced Technology and Projects) group on Project Ara, specializing in UX/UI design.",
+      "At Google, I worked on a five-person team within the ATAP (Advanced Technology and Projects) group on Project Ara, specializing in UX/UI design.",
   },
   {
     organization: "Autodesk",
     description:
-      "Worked on a team of four interns specializing in VR interfaces within the Office of the CTO.",
+      "At Autodesk, I worked on a team of four interns specializing in VR. We were tasked with exploring the integration of VR into the Autodesk product line, and reported to the CTO.",
   },
   {
     organization: "Cornell University",
     description:
-      "Worked for the Cornell Program of Computer Graphics as a researcher and teaching assistant under Don Greenberg's leadership.",
+      "At Cornell, I worked for the Cornell Program of Computer Graphics as a researcher and teaching assistant under Don Greenberg's leadership.",
   },
 ]
 
@@ -275,3 +275,4 @@ export const coreTenets = [
 ]
 
 export const contactEmail = "john.scheeler44@gmail.com"
+export const resumeUrl = "/resume/john-scheeler-resume.pdf"
