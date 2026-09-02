@@ -4,10 +4,6 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    remotePatterns: [
-      { protocol: "https", hostname: "media.graphassets.com" },
-      { protocol: "https", hostname: "**.graphassets.com" },
-    ],
   },
 }
 

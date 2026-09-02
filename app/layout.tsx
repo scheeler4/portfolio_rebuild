@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolio | Bridging Architecture, Computation & Earth Data",
+  title: "John Scheeler | Portfolio",
   description:
-    "Product Designer specializing in earth data platforms, computational design, and interactive visualization.",
+    "A culmination of John Scheeler's work in architecture, technology, and design — spanning computational tools, UX research, and VR interfaces.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Portfolio | Bridging Architecture, Computation & Earth Data",
+    title: "John Scheeler | Portfolio",
     description:
-      "Product Designer specializing in earth data platforms, computational design, and interactive visualization.",
+      "A culmination of John Scheeler's work in architecture, technology, and design — spanning computational tools, UX research, and VR interfaces.",
     type: "website",
   },
 }
@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark bg-background">
       <body className="font-sans antialiased">
         {children}
         <Analytics />

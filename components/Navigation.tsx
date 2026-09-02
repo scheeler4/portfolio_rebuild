@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { contactEmail } from "@/lib/projects"
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,7 +38,7 @@ export default function Navigation() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="text-foreground font-semibold tracking-tight text-lg">
-              YourName
+              John Scheeler
             </Link>
 
             <div className="hidden md:flex items-center gap-1">
@@ -55,7 +56,7 @@ export default function Navigation() {
                 About
               </Link>
               <a
-                href="mailto:your.email@example.com"
+                href={`mailto:${contactEmail}`}
                 className="ml-2 px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200"
               >
                 Contact
@@ -92,7 +93,7 @@ export default function Navigation() {
               About
             </Link>
             <a
-              href="mailto:your.email@example.com"
+              href={`mailto:${contactEmail}`}
               className="text-2xl font-medium text-primary hover:text-primary/80 transition-colors"
             >
               Contact
